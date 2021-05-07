@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Hangman</title>
+  <!-- Load stylesheet -->
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-  
+    <div class="header">
+      <p>Hangman</p>
+    </div>
+  <main>
+    <div class="wrapper">
+      <!-- Gallows -->
+    
+      <div class="gallows" id="gallows">
+        <span class="rope"></span>
+        <span class="horizontalScaffold"></span>
+        <span class="verticalScaffold"></span>
+        <span class="platform"></span>
+        <!--drawing hangman  -->
+        <div class="body">
+          <span class="head hidden"></span>
+          <span class="torso hidden"></span>
+          <span class="leftArm hidden"></span>
+          <span class="rightArm hidden"></span>
+          <span class="leftLeg hidden"></span>
+          <span class="rightLeg hidden"></span>
+        </div>
+      </div>
+
+      
+
+      <!-- Blanks -->
+      <div class="blank" aria-label="if you guess a correct letter it will appear here"></div>
+
+      <!-- input guesses -->
+      <form action="#" id="onePlayerGuessForm" class="guessForm" autocomplete="off">
+        <label class="sr-only" for="onePlayerGuessInput">Guess a letter</label>
+        <input id="onePlayerGuessInput" type="text" placeholder="Guess letter" maxlength="1" required>
+        <button>guess</button>
+      </form>
+
+      <!--wrong guesses -->
+      <div class="wrong" aria-label="if you guess a wrong letter it will appear here"></div>
+      <!-- play again-->
+      <button class="playAgain hidden">Play again</button>
+      
+      <div class="startButtonContainer">
+        <button class="play">Play</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- <div class="alertModalBackground" id="alertModalBackground"></div> -->
 
   <script src="./scripts/script.js"></script>
 </body>
